@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mis vehículos | UAAventón</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="app-body">
+
+<header class="header app-header">
+    <div class="container nav-container">
+
+        <a href="dashboard.html" class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-route"></i>
+            </div>
+
+            <span>UAA<span>ventón</span></span>
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="dashboard.html" class="nav-link">Inicio</a>
+            <a href="buscar.html" class="nav-link">Buscar viaje</a>
+            <a href="publicar.html" class="nav-link">Publicar viaje</a>
+            <a href="mis-viajes.html" class="nav-link">Mis viajes</a>
+        </nav>
+
+        <div class="dashboard-user">
+
+            <button class="notification-button">
+                <i class="fa-regular fa-bell"></i>
+                <span></span>
+            </button>
+
+            <a href="perfil.html" class="dashboard-profile">
+                <div class="dashboard-avatar">
+                    FA
+                </div>
+
+                <div>
+                    <strong>Fabricio</strong>
+                    <small>Estudiante</small>
+                </div>
+
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+        </div>
+    </div>
+</header>
+
+
+<main class="vehicles-page">
+
+    <div class="container">
+
+        <a href="perfil.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i>
+            Volver a mi perfil
+        </a>
+
+
+        <div class="vehicles-heading">
+
+            <div>
+                <span class="section-eyebrow">
+                    PERFIL DE CONDUCTOR
+                </span>
+
+                <h1>Mis vehículos</h1>
+
+                <p>
+                    Registra los vehículos que utilizarás para compartir viajes.
+                </p>
+            </div>
+
+
+            <button
+                class="btn btn-primary"
+                id="openVehicleModal"
+                type="button"
+            >
+                <i class="fa-solid fa-plus"></i>
+                Agregar vehículo
+            </button>
+
+        </div>
+
+
+        <!-- MENSAJE INFORMATIVO -->
+
+        <div class="vehicle-security-banner">
+
+            <div class="vehicle-security-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <div>
+                <strong>Tu seguridad también comienza aquí</strong>
+
+                <p>
+                    Los pasajeros podrán consultar el modelo, color y una
+                    versión protegida de las placas antes de solicitar un viaje.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- CONTENIDO -->
+
+        <div class="vehicles-layout">
+
+            <section>
+
+                <div class="vehicles-section-heading">
+
+                    <div>
+                        <span>VEHÍCULOS REGISTRADOS</span>
+                        <h2>Tus vehículos</h2>
+                    </div>
+
+                    <span
+                        class="vehicle-count"
+                        id="vehicleCount"
+                    >
+                        0 vehículos
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="vehicles-grid"
+                    id="vehiclesGrid"
+                >
+                    <!-- JavaScript inserta los vehículos -->
+                </div>
+
+
+                <!-- EMPTY STATE -->
+
+                <div
+                    class="vehicles-empty"
+                    id="vehiclesEmpty"
+                >
+
+                    <div class="vehicles-empty-icon">
+                        <i class="fa-solid fa-car-side"></i>
+                    </div>
+
+                    <h3>Aún no tienes vehículos</h3>
+
+                    <p>
+                        Registra tu primer vehículo para comenzar
+                        a publicar viajes en UAAventón.
+                    </p>
+
+                    <button
+                        class="btn btn-primary"
+                        id="emptyAddVehicle"
+                        type="button"
+                    >
+                        <i class="fa-solid fa-plus"></i>
+                        Registrar vehículo
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- COLUMNA DERECHA -->
+
+            <aside class="driver-vehicle-info">
+
+                <div class="driver-info-number">
+                    01
+                </div>
+
+                <span>ANTES DE PUBLICAR</span>
+
+                <h3>
+                    Necesitas al menos un vehículo registrado.
+                </h3>
+
+                <p>
+                    Cuando publiques un viaje podrás seleccionar cualquiera
+                    de los vehículos disponibles en esta sección.
+                </p>
+
+
+                <div class="vehicle-info-list">
+
+                    <div>
+                        <i class="fa-solid fa-check"></i>
+
+                        <span>
+                            Marca y modelo
+                        </span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-check"></i>
+
+                        <span>
+                            Año del vehículo
+                        </span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-check"></i>
+
+                        <span>
+                            Color
+                        </span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-check"></i>
+
+                        <span>
+                            Placas
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="publicar.html"
+                    class="vehicle-publish-link"
+                >
+                    Ir a publicar viaje
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- =====================================================
+     MODAL NUEVO VEHÍCULO
+===================================================== -->
+
+<div
+    class="vehicle-modal"
+    id="vehicleModal"
+>
+
+    <div class="vehicle-modal-overlay"></div>
+
+
+    <div class="vehicle-modal-card">
+
+        <button
+            class="modal-close"
+            id="closeVehicleModal"
+            type="button"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <div class="vehicle-modal-heading">
+
+            <div class="vehicle-modal-icon">
+                <i class="fa-solid fa-car-side"></i>
+            </div>
+
+            <span>NUEVO VEHÍCULO</span>
+
+            <h2>Registra tu vehículo</h2>
+
+            <p>
+                Esta información ayudará a los pasajeros
+                a identificar tu automóvil.
+            </p>
+
+        </div>
+
+
+        <form id="vehicleForm">
+
+            <div class="vehicle-form-grid">
+
+                <div class="vehicle-form-field">
+
+                    <label for="vehicleBrand">
+                        Marca
+                    </label>
+
+                    <input
+                        type="text"
+                        id="vehicleBrand"
+                        placeholder="Ej. Nissan"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="vehicle-form-field">
+
+                    <label for="vehicleModel">
+                        Modelo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="vehicleModel"
+                        placeholder="Ej. Versa"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="vehicle-form-field">
+
+                    <label for="vehicleYear">
+                        Año
+                    </label>
+
+                    <input
+                        type="number"
+                        id="vehicleYear"
+                        placeholder="2024"
+                        min="1990"
+                        max="2030"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="vehicle-form-field">
+
+                    <label for="vehicleColor">
+                        Color
+                    </label>
+
+                    <input
+                        type="text"
+                        id="vehicleColor"
+                        placeholder="Ej. Gris"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="vehicle-form-field vehicle-form-full">
+
+                    <label for="vehiclePlates">
+                        Placas
+                    </label>
+
+                    <input
+                        type="text"
+                        id="vehiclePlates"
+                        placeholder="Ej. ABC-123-A"
+                        maxlength="12"
+                        required
+                    >
+
+                    <small>
+                        Las placas completas no serán mostradas públicamente.
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="vehicle-form-actions">
+
+                <button
+                    type="button"
+                    class="btn vehicle-cancel-button"
+                    id="cancelVehicle"
+                >
+                    Cancelar
+                </button>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                    Registrar vehículo
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     CONFIRMAR ELIMINACIÓN
+===================================================== -->
+
+<div
+    class="vehicle-delete-modal"
+    id="vehicleDeleteModal"
+>
+
+    <div class="vehicle-modal-overlay"></div>
+
+    <div class="vehicle-delete-card">
+
+        <div class="vehicle-delete-icon">
+            <i class="fa-regular fa-trash-can"></i>
+        </div>
+
+        <span>ELIMINAR VEHÍCULO</span>
+
+        <h3>¿Quieres eliminar este vehículo?</h3>
+
+        <p>
+            Dejará de aparecer como opción al momento
+            de publicar nuevos viajes.
+        </p>
+
+        <div class="vehicle-delete-actions">
+
+            <button
+                type="button"
+                class="btn vehicle-cancel-button"
+                id="cancelDeleteVehicle"
+            >
+                Cancelar
+            </button>
+
+            <button
+                type="button"
+                class="btn vehicle-delete-confirm"
+                id="confirmDeleteVehicle"
+            >
+                Eliminar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<nav class="bottom-navigation">
+
+    <a href="dashboard.html" class="bottom-nav-item">
+        <i class="fa-solid fa-house"></i>
+        <span>Inicio</span>
+    </a>
+
+    <a href="buscar.html" class="bottom-nav-item">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>Buscar</span>
+    </a>
+
+    <a href="publicar.html" class="bottom-nav-item publish-item">
+
+        <div class="publish-button">
+            <i class="fa-solid fa-plus"></i>
+        </div>
+
+        <span>Publicar</span>
+
+    </a>
+
+    <a href="mis-viajes.html" class="bottom-nav-item">
+        <i class="fa-solid fa-route"></i>
+        <span>Viajes</span>
+    </a>
+
+    <a href="perfil.html" class="bottom-nav-item active">
+        <i class="fa-regular fa-user"></i>
+        <span>Perfil</span>
+    </a>
+
+</nav>
+
+
+<script src="js/app.js"></script>
+<script src="js/vehiculos.js"></script>
+
+</body>
+</html>

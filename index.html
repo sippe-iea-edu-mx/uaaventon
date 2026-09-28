@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UAAventón | Comparte el camino</title>
+
+    <meta
+        name="description"
+        content="UAAventón es una plataforma de viajes compartidos para estudiantes de la Universidad Autónoma de Aguascalientes."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="header">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-route"></i>
+                </div>
+
+                <span>UAA<span>ventón</span></span>
+            </a>
+
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-link active">Inicio</a>
+                <a href="buscar.html" class="nav-link">Buscar viaje</a>
+                <a href="publicar.html" class="nav-link">Publicar viaje</a>
+                <a href="mis-viajes.html" class="nav-link">Mis viajes</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="login.html" class="btn-login">
+                    Iniciar sesión
+                </a>
+
+                <a href="registro.html" class="btn btn-primary btn-small">
+                    Crear cuenta
+                </a>
+            </div>
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                aria-label="Abrir menú"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- =========================================
+         MENÚ MÓVIL
+    ========================================== -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <div class="mobile-menu-header">
+
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-route"></i>
+                </div>
+
+                <span>UAA<span>ventón</span></span>
+            </a>
+
+            <button
+                class="mobile-close-button"
+                id="mobileCloseButton"
+                aria-label="Cerrar menú"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+        <nav class="mobile-menu-links">
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                Inicio
+            </a>
+
+            <a href="buscar.html">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Buscar viaje
+            </a>
+
+            <a href="publicar.html">
+                <i class="fa-solid fa-circle-plus"></i>
+                Publicar viaje
+            </a>
+
+            <a href="mis-viajes.html">
+                <i class="fa-solid fa-route"></i>
+                Mis viajes
+            </a>
+
+            <a href="perfil.html">
+                <i class="fa-regular fa-user"></i>
+                Perfil
+            </a>
+
+        </nav>
+
+        <div class="mobile-menu-actions">
+
+            <a href="login.html" class="btn btn-outline">
+                Iniciar sesión
+            </a>
+
+            <a href="registro.html" class="btn btn-primary">
+                Crear cuenta
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container hero-container">
+
+                <!-- TEXTO -->
+
+                <div class="hero-content">
+
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Exclusivo para estudiantes UAA
+                    </div>
+
+                    <h1>
+                        Comparte el camino.
+                        <span>Reduce tus gastos.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Encuentra estudiantes que van hacia tu mismo destino,
+                        comparte el trayecto y haz que moverte desde la
+                        universidad sea más fácil, seguro y económico.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="buscar.html" class="btn btn-primary btn-large">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            Buscar viaje
+                        </a>
+
+                        <a href="publicar.html" class="btn btn-secondary btn-large">
+                            <i class="fa-solid fa-plus"></i>
+                            Publicar viaje
+                        </a>
+
+                    </div>
+
+                    <div class="hero-benefits">
+
+                        <div class="benefit">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Comunidad UAA
+                        </div>
+
+                        <div class="benefit">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Ahorra en transporte
+                        </div>
+
+                        <div class="benefit">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Viajes entre estudiantes
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TARJETA VISUAL -->
+
+                <div class="hero-visual">
+
+                    <div class="map-decoration map-decoration-one"></div>
+                    <div class="map-decoration map-decoration-two"></div>
+
+                    <div class="route-card">
+
+                        <div class="route-card-header">
+
+                            <div>
+                                <span class="small-label">
+                                    Próximo viaje
+                                </span>
+
+                                <h3>Universidad → Rincón de Romos</h3>
+                            </div>
+
+                            <span class="status-badge">
+                                Activo
+                            </span>
+
+                        </div>
+
+
+                        <div class="route-content">
+
+                            <div class="route-timeline">
+
+                                <div class="timeline-point origin-point">
+                                    <span></span>
+                                </div>
+
+                                <div class="timeline-line"></div>
+
+                                <div class="timeline-point destination-point">
+                                    <span></span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="route-locations">
+
+                                <div class="route-location">
+
+                                    <span class="route-time">
+                                        14:30
+                                    </span>
+
+                                    <div>
+                                        <strong>Universidad Autónoma de Aguascalientes</strong>
+                                        <p>Acceso Norte</p>
+                                    </div>
+
+                                </div>
+
+                                <div class="route-location">
+
+                                    <span class="route-time">
+                                        15:15
+                                    </span>
+
+                                    <div>
+                                        <strong>Rincón de Romos</strong>
+                                        <p>Centro</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="route-driver">
+
+                            <div class="driver-info">
+
+                                <div class="avatar">
+                                    FA
+                                </div>
+
+                                <div>
+                                    <strong>Fabricio Ávila</strong>
+
+                                    <div class="rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <span>4.9</span>
+                                        <small>• 24 viajes</small>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="trip-price">
+
+                                <span>por persona</span>
+                                <strong>$35</strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="route-footer">
+
+                            <div>
+                                <i class="fa-solid fa-car"></i>
+                                Nissan Versa
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-user-group"></i>
+                                3 lugares
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             BUSCADOR RÁPIDO
+        ========================================== -->
+
+        <section class="quick-search-section">
+
+            <div class="container">
+
+                <div class="quick-search-card">
+
+                    <div class="quick-search-title">
+
+                        <span>¿A dónde vas?</span>
+
+                        <h2>Encuentra un viaje</h2>
+
+                    </div>
+
+
+                    <form
+                        class="quick-search-form"
+                        action="buscar.html"
+                        method="GET"
+                    >
+
+                        <div class="search-field">
+
+                            <div class="field-icon">
+                                <i class="fa-regular fa-circle-dot"></i>
+                            </div>
+
+                            <div>
+                                <label for="origin">
+                                    Desde
+                                </label>
+
+                                <select id="origin" name="origin">
+                                    <option value="">
+                                        Selecciona tu salida
+                                    </option>
+
+                                    <option value="norte">
+                                        Acceso Norte UAA
+                                    </option>
+
+                                    <option value="sur">
+                                        Acceso Sur UAA
+                                    </option>
+
+                                    <option value="poniente">
+                                        Acceso Poniente UAA
+                                    </option>
+
+                                    <option value="oriente">
+                                        Acceso Oriente UAA
+                                    </option>
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="search-divider"></div>
+
+
+                        <div class="search-field">
+
+                            <div class="field-icon destination-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+
+                            <div>
+                                <label for="destination">
+                                    Hacia
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="destination"
+                                    name="destination"
+                                    placeholder="¿A dónde vas?"
+                                >
+                            </div>
+
+                        </div>
+
+
+                        <div class="search-divider"></div>
+
+
+                        <div class="search-field">
+
+                            <div class="field-icon">
+                                <i class="fa-regular fa-calendar"></i>
+                            </div>
+
+                            <div>
+                                <label for="date">
+                                    Fecha
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="date"
+                                    name="date"
+                                >
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary search-button"
+                        >
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            Buscar
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             CÓMO FUNCIONA
+        ========================================== -->
+
+        <section class="how-it-works">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <span class="section-eyebrow">
+                        MUY FÁCIL
+                    </span>
+
+                    <h2>¿Cómo funciona UAAventón?</h2>
+
+                    <p>
+                        Conectamos estudiantes que comparten el mismo camino.
+                    </p>
+
+                </div>
+
+
+                <div class="steps-grid">
+
+                    <article class="step-card">
+
+                        <div class="step-number">
+                            01
+                        </div>
+
+                        <div class="step-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+
+                        <h3>Encuentra o publica</h3>
+
+                        <p>
+                            Busca un viaje hacia tu destino o publica el
+                            trayecto que ya vas a realizar.
+                        </p>
+
+                    </article>
+
+
+                    <article class="step-card">
+
+                        <div class="step-number">
+                            02
+                        </div>
+
+                        <div class="step-icon">
+                            <i class="fa-solid fa-user-group"></i>
+                        </div>
+
+                        <h3>Conecta</h3>
+
+                        <p>
+                            Encuentra otros estudiantes de la UAA que
+                            comparten una ruta compatible contigo.
+                        </p>
+
+                    </article>
+
+
+                    <article class="step-card">
+
+                        <div class="step-number">
+                            03
+                        </div>
+
+                        <div class="step-icon">
+                            <i class="fa-solid fa-route"></i>
+                        </div>
+
+                        <h3>Comparte el camino</h3>
+
+                        <p>
+                            Viajen juntos, aprovechen los lugares disponibles
+                            y reduzcan los gastos del trayecto.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             SECCIÓN COMUNIDAD
+        ========================================== -->
+
+        <section class="community-section">
+
+            <div class="container community-container">
+
+                <div class="community-content">
+
+                    <span class="section-eyebrow">
+                        HECHO PARA UNIVERSITARIOS
+                    </span>
+
+                    <h2>
+                        El asiento vacío de alguien puede ser
+                        <span>tu próximo viaje.</span>
+                    </h2>
+
+                    <p>
+                        Todos los días cientos de estudiantes realizan
+                        trayectos similares desde la universidad.
+                        UAAventón busca conectarlos.
+                    </p>
+
+
+                    <div class="community-features">
+
+                        <div class="community-feature">
+
+                            <div class="community-feature-icon">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+
+                            <div>
+                                <strong>Comunidad universitaria</strong>
+                                <p>
+                                    Perfiles asociados a estudiantes de la UAA.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="community-feature">
+
+                            <div class="community-feature-icon">
+                                <i class="fa-solid fa-piggy-bank"></i>
+                            </div>
+
+                            <div>
+                                <strong>Reduce tus gastos</strong>
+                                <p>
+                                    Comparte el costo de los trayectos que
+                                    realizas todos los días.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="community-feature">
+
+                            <div class="community-feature-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+
+                            <div>
+                                <strong>Baja donde te convenga</strong>
+                                <p>
+                                    Puedes elegir un punto intermedio siempre
+                                    que se encuentre dentro de la ruta.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="community-map">
+
+                    <div class="fake-map">
+
+                        <div class="map-road road-one"></div>
+                        <div class="map-road road-two"></div>
+                        <div class="map-road road-three"></div>
+
+                        <div class="map-route-line"></div>
+
+                        <div class="map-marker marker-uaa">
+                            <div class="marker-icon">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+
+                            <span>UAA</span>
+                        </div>
+
+
+                        <div class="map-marker marker-middle">
+                            <div class="marker-dot"></div>
+
+                            <span>Punto intermedio</span>
+                        </div>
+
+
+                        <div class="map-marker marker-destination">
+                            <div class="marker-icon destination">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+
+                            <span>Tu destino</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             CTA
+        ========================================== -->
+
+        <section class="cta-section">
+
+            <div class="container">
+
+                <div class="cta-card">
+
+                    <div>
+
+                        <span class="cta-small">
+                            ¿LISTO PARA EMPEZAR?
+                        </span>
+
+                        <h2>
+                            Tu próximo viaje puede estar
+                            más cerca de lo que imaginas.
+                        </h2>
+
+                        <p>
+                            Únete a UAAventón y empieza a compartir
+                            el camino con otros estudiantes.
+                        </p>
+
+                    </div>
+
+
+                    <div class="cta-actions">
+
+                        <a
+                            href="registro.html"
+                            class="btn btn-white btn-large"
+                        >
+                            Crear mi cuenta
+                        </a>
+
+                        <a
+                            href="buscar.html"
+                            class="btn btn-transparent btn-large"
+                        >
+                            Buscar viaje
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo footer-logo">
+
+                    <div class="logo-icon">
+                        <i class="fa-solid fa-route"></i>
+                    </div>
+
+                    <span>UAA<span>ventón</span></span>
+
+                </a>
+
+                <p>
+                    Comparte el camino.<br>
+                    Reduce tus gastos.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div>
+                    <strong>UAAventón</strong>
+
+                    <a href="buscar.html">
+                        Buscar viaje
+                    </a>
+
+                    <a href="publicar.html">
+                        Publicar viaje
+                    </a>
+
+                    <a href="mis-viajes.html">
+                        Mis viajes
+                    </a>
+                </div>
+
+
+                <div>
+                    <strong>Cuenta</strong>
+
+                    <a href="login.html">
+                        Iniciar sesión
+                    </a>
+
+                    <a href="registro.html">
+                        Crear cuenta
+                    </a>
+
+                    <a href="perfil.html">
+                        Mi perfil
+                    </a>
+                </div>
+
+
+                <div>
+                    <strong>Información</strong>
+
+                    <a href="#">
+                        Seguridad
+                    </a>
+
+                    <a href="#">
+                        Privacidad
+                    </a>
+
+                    <a href="#">
+                        Términos
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 UAAventón.
+            </p>
+
+            <p>
+                Proyecto universitario · Universidad Autónoma de Aguascalientes
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         NAVEGACIÓN MÓVIL INFERIOR
+    ========================================== -->
+
+    <nav class="bottom-navigation">
+
+        <a href="index.html" class="bottom-nav-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>Inicio</span>
+        </a>
+
+        <a href="buscar.html" class="bottom-nav-item">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Buscar</span>
+        </a>
+
+        <a href="publicar.html" class="bottom-nav-item publish-item">
+            <div class="publish-button">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <span>Publicar</span>
+        </a>
+
+        <a href="mis-viajes.html" class="bottom-nav-item">
+            <i class="fa-solid fa-route"></i>
+            <span>Viajes</span>
+        </a>
+
+        <a href="perfil.html" class="bottom-nav-item">
+            <i class="fa-regular fa-user"></i>
+            <span>Perfil</span>
+        </a>
+
+    </nav>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

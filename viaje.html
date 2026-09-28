@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Detalle del viaje | UAAventón</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body class="app-body">
+
+
+    <!-- HEADER -->
+
+    <header class="header app-header">
+
+        <div class="container nav-container">
+
+            <a href="dashboard.html" class="logo">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-route"></i>
+                </div>
+
+                <span>UAA<span>ventón</span></span>
+
+            </a>
+
+
+            <nav class="desktop-nav">
+
+                <a href="dashboard.html" class="nav-link">
+                    Inicio
+                </a>
+
+                <a href="buscar.html" class="nav-link active">
+                    Buscar viaje
+                </a>
+
+                <a href="publicar.html" class="nav-link">
+                    Publicar viaje
+                </a>
+
+                <a href="mis-viajes.html" class="nav-link">
+                    Mis viajes
+                </a>
+
+            </nav>
+
+
+            <div class="dashboard-user">
+
+                <button class="notification-button">
+                    <i class="fa-regular fa-bell"></i>
+                    <span></span>
+                </button>
+
+                <a href="perfil.html" class="dashboard-profile">
+
+                    <div class="dashboard-avatar">
+                        FA
+                    </div>
+
+                    <div>
+                        <strong>Fabricio</strong>
+                        <small>Estudiante</small>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="trip-detail-page">
+
+        <div class="container">
+
+            <!-- REGRESAR -->
+
+            <a
+                href="buscar.html"
+                class="back-link"
+            >
+                <i class="fa-solid fa-arrow-left"></i>
+                Volver a resultados
+            </a>
+
+
+            <!-- CABECERA -->
+
+            <div class="trip-detail-heading">
+
+                <div>
+
+                    <span class="trip-detail-status">
+                        <span></span>
+                        Viaje disponible
+                    </span>
+
+                    <h1>
+                        UAA
+                        <i class="fa-solid fa-arrow-right"></i>
+                        Rincón de Romos
+                    </h1>
+
+                    <p>
+                        Viernes 18 de septiembre · 14:30
+                    </p>
+
+                </div>
+
+
+                <div class="detail-price">
+
+                    <span>POR PERSONA</span>
+
+                    <strong>$35</strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- LAYOUT -->
+
+            <div class="trip-detail-layout">
+
+                <!-- COLUMNA IZQUIERDA -->
+
+                <div class="trip-detail-main">
+
+
+                    <!-- MAPA -->
+
+                    <section class="real-route-map">
+
+                        <div class="map-top-bar">
+
+                            <div>
+                                <i class="fa-solid fa-route"></i>
+
+                                <span>
+                                    Ruta del viaje
+                                </span>
+                            </div>
+
+
+                            <button type="button">
+                                <i class="fa-solid fa-expand"></i>
+                            </button>
+
+                        </div>
+
+
+                        <div class="detail-map-canvas">
+
+                            <!-- CALLES DECORATIVAS -->
+
+                            <div class="detail-road road-a"></div>
+                            <div class="detail-road road-b"></div>
+                            <div class="detail-road road-c"></div>
+                            <div class="detail-road road-d"></div>
+                            <div class="detail-road road-e"></div>
+
+
+                            <!-- RUTA -->
+
+                            <div class="detail-route-line line-one"></div>
+                            <div class="detail-route-line line-two"></div>
+                            <div class="detail-route-line line-three"></div>
+
+
+                            <!-- UAA -->
+
+                            <div class="detail-map-marker marker-start">
+
+                                <div class="map-marker-circle start">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+
+                                <div>
+                                    <small>ORIGEN</small>
+                                    <strong>UAA</strong>
+                                </div>
+
+                            </div>
+
+                            <div id="dynamicIntermediatePoints"></div>
+
+                            <!-- DESTINO -->
+
+                            <div class="detail-map-marker marker-end">
+
+                                <div class="map-marker-circle end">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+
+                                <div>
+                                    <small>DESTINO</small>
+                                    <strong>Rincón de Romos</strong>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- INFORMACIÓN DEL TRAYECTO -->
+
+                    <section class="detail-section-card">
+
+                        <div class="detail-section-title">
+
+                            <div>
+                                <span>01</span>
+
+                                <div>
+                                    <small>TRAYECTO</small>
+                                    <h2>Información del viaje</h2>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="detail-route-summary">
+
+                            <div class="detail-route-timeline">
+
+                                <span class="detail-origin-dot"></span>
+
+                                <div></div>
+
+                                <span class="detail-end-dot"></span>
+
+                            </div>
+
+
+                            <div class="detail-route-info">
+
+                                <div>
+
+                                    <span class="detail-time">
+                                        14:30
+                                    </span>
+
+                                    <div>
+                                        <small>ORIGEN</small>
+
+                                        <strong>
+                                            Acceso Norte UAA
+                                        </strong>
+
+                                        <p>
+                                            Universidad Autónoma de Aguascalientes
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span class="detail-time">
+                                        15:15
+                                    </span>
+
+                                    <div>
+                                        <small>DESTINO FINAL</small>
+
+                                        <strong>
+                                            Rincón de Romos
+                                        </strong>
+
+                                        <p>
+                                            Zona Centro
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="trip-detail-data">
+
+                            <div>
+
+                                <i class="fa-regular fa-calendar"></i>
+
+                                <span>
+                                    <small>FECHA</small>
+                                    <strong>18 sep. 2026</strong>
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="fa-regular fa-clock"></i>
+
+                                <span>
+                                    <small>SALIDA</small>
+                                    <strong>14:30</strong>
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="fa-solid fa-user-group"></i>
+
+                                <span>
+                                    <small>DISPONIBLES</small>
+                                    <strong>3 lugares</strong>
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="fa-solid fa-money-bill"></i>
+
+                                <span>
+                                    <small>COSTO</small>
+                                    <strong>$35</strong>
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- CONDUCTOR -->
+
+                    <section class="detail-section-card">
+
+                        <div class="detail-section-title">
+
+                            <div>
+
+                                <span>02</span>
+
+                                <div>
+                                    <small>CONDUCTOR</small>
+                                    <h2>Conoce con quién viajas</h2>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="driver-detail-profile">
+
+                            <div class="driver-large-avatar">
+                                FA
+                            </div>
+
+
+                            <div class="driver-detail-info">
+
+                                <h3>Fabricio Ávila</h3>
+
+                                <div class="driver-rating-large">
+
+                                    <i class="fa-solid fa-route"></i>
+
+                                    <span id="driverTripCount">
+                                        Viajes publicados
+                                    </span>
+
+                                </div>
+
+
+                                <div class="driver-badges">
+
+                                    <span>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        Perfil universitario
+                                    </span>
+
+                                    <span>
+                                        <i class="fa-solid fa-car"></i>
+                                        Conductor
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- VEHÍCULO -->
+
+                    <section class="detail-section-card">
+
+                        <div class="detail-section-title">
+
+                            <div>
+
+                                <span>03</span>
+
+                                <div>
+                                    <small>VEHÍCULO</small>
+                                    <h2>Tu vehículo para este viaje</h2>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="vehicle-detail">
+
+                            <div class="vehicle-detail-icon">
+                                <i class="fa-solid fa-car-side"></i>
+                            </div>
+
+
+                            <div class="vehicle-detail-name">
+
+                                <small>VEHÍCULO</small>
+
+                                <strong>Nissan Versa</strong>
+
+                                <span>2022</span>
+
+                            </div>
+
+
+                            <div class="vehicle-property">
+
+                                <small>COLOR</small>
+                                <strong>Gris</strong>
+
+                            </div>
+
+
+                            <div class="vehicle-property">
+
+                                <small>PLACAS</small>
+                                <strong>***-42-A</strong>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+
+                <!-- =====================================
+                     RESERVA
+                ====================================== -->
+
+                <aside class="reservation-card">
+
+                    <div class="reservation-heading">
+
+                        <span>RESERVA TU LUGAR</span>
+
+                        <h2>
+                            ¿Dónde quieres bajar?
+                        </h2>
+
+                        <p>
+                            Selecciona un punto que se encuentre dentro
+                            de la ruta del conductor.
+                        </p>
+
+                    </div>
+
+
+                    <div class="dropoff-field">
+
+                        <label for="dropoffPoint">
+                            Punto de bajada
+                        </label>
+
+
+                        <div class="dropoff-select-wrapper">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <select id="dropoffPoint">
+
+                                <option value="">
+                                    Selecciona un punto
+                                </option>
+
+                                <option value="Av. Universidad">
+                                    Av. Universidad
+                                </option>
+
+                                <option value="Jesús María">
+                                    Jesús María
+                                </option>
+
+                                <option value="San Francisco de los Romo">
+                                    San Francisco de los Romo
+                                </option>
+
+                                <option value="Rincón de Romos">
+                                    Rincón de Romos
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="selected-dropoff"
+                        id="selectedDropoff"
+                    >
+
+                        <div>
+                            <i class="fa-solid fa-location-arrow"></i>
+                        </div>
+
+                        <span>
+                            Selecciona dónde quieres bajar.
+                        </span>
+
+                    </div>
+
+
+                    <div class="reservation-summary">
+
+                        <div>
+                            <span>1 lugar</span>
+                            <strong>$35</strong>
+                        </div>
+
+                        <div>
+                            <span>Comisión</span>
+                            <strong>$0</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="reservation-total">
+
+                        <span>Total</span>
+
+                        <strong>$35</strong>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-primary reservation-button"
+                        id="requestSeatButton"
+                    >
+                        Solicitar lugar
+
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+
+                    <div class="reservation-security">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <span>
+                            Tu solicitud deberá ser confirmada
+                            por el conductor.
+                        </span>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================================
+         MODAL
+    ========================================== -->
+
+    <div
+        class="request-modal"
+        id="requestModal"
+    >
+
+        <div class="request-modal-overlay"></div>
+
+
+        <div class="request-modal-card">
+
+            <button
+                type="button"
+                class="modal-close"
+                id="closeRequestModal"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+
+            <div class="modal-success-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+
+            <span class="modal-eyebrow">
+                SOLICITUD ENVIADA
+            </span>
+
+
+            <h2>
+                ¡Tu lugar está solicitado!
+            </h2>
+
+
+            <p>
+                Fabricio recibirá tu solicitud y podrá
+                confirmarla antes del viaje.
+            </p>
+
+
+            <div class="modal-trip-summary">
+
+                <div>
+
+                    <small>VIAJE</small>
+
+                    <strong>
+                        UAA → Rincón de Romos
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <small>TU BAJADA</small>
+
+                    <strong id="modalDropoff">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="mis-viajes.html"
+                class="btn btn-primary modal-main-button"
+            >
+                Ver mis viajes
+            </a>
+
+
+            <button
+                type="button"
+                class="modal-secondary-button"
+                id="continueBrowsing"
+            >
+                Seguir buscando
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- MOBILE NAV -->
+
+    <nav class="bottom-navigation">
+
+        <a
+            href="dashboard.html"
+            class="bottom-nav-item"
+        >
+            <i class="fa-solid fa-house"></i>
+            <span>Inicio</span>
+        </a>
+
+        <a
+            href="buscar.html"
+            class="bottom-nav-item active"
+        >
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Buscar</span>
+        </a>
+
+        <a
+            href="publicar.html"
+            class="bottom-nav-item publish-item"
+        >
+            <div class="publish-button">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+
+            <span>Publicar</span>
+        </a>
+
+        <a
+            href="mis-viajes.html"
+            class="bottom-nav-item"
+        >
+            <i class="fa-solid fa-route"></i>
+            <span>Viajes</span>
+        </a>
+
+        <a
+            href="perfil.html"
+            class="bottom-nav-item"
+        >
+            <i class="fa-regular fa-user"></i>
+            <span>Perfil</span>
+        </a>
+
+    </nav>
+
+
+    <script src="js/app.js"></script>
+    <script src="js/viaje.js"></script>
+
+</body>
+</html>

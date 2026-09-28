@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Publicar viaje | UAAventón</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body class="app-body">
+
+
+<header class="header app-header">
+
+    <div class="container nav-container">
+
+        <a href="dashboard.html" class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-route"></i>
+            </div>
+
+            <span>UAA<span>ventón</span></span>
+
+        </a>
+
+
+        <nav class="desktop-nav">
+
+            <a href="dashboard.html" class="nav-link">
+                Inicio
+            </a>
+
+            <a href="buscar.html" class="nav-link">
+                Buscar viaje
+            </a>
+
+            <a href="publicar.html" class="nav-link active">
+                Publicar viaje
+            </a>
+
+            <a href="mis-viajes.html" class="nav-link">
+                Mis viajes
+            </a>
+
+        </nav>
+
+
+        <div class="dashboard-user">
+
+            <button class="notification-button">
+                <i class="fa-regular fa-bell"></i>
+                <span></span>
+            </button>
+
+
+            <a href="perfil.html" class="dashboard-profile">
+
+                <div class="dashboard-avatar">
+                    FA
+                </div>
+
+                <div>
+                    <strong>Fabricio</strong>
+                    <small>Estudiante</small>
+                </div>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="publish-page">
+
+    <div class="container">
+
+        <!-- ENCABEZADO -->
+
+        <div class="publish-heading">
+
+            <span class="section-eyebrow">
+                COMPARTE TU CAMINO
+            </span>
+
+            <h1>Publicar un viaje</h1>
+
+            <p>
+                Cuéntanos a dónde vas y encuentra estudiantes
+                que puedan compartir el trayecto contigo.
+            </p>
+
+        </div>
+
+
+        <!-- STEPPER -->
+
+        <div class="publish-progress">
+
+            <div
+                class="publish-progress-item active"
+                data-progress="1"
+            >
+
+                <span>1</span>
+
+                <div>
+                    <strong>Ruta</strong>
+                    <small>Origen y destino</small>
+                </div>
+
+            </div>
+
+
+            <div class="publish-progress-line"></div>
+
+
+            <div
+                class="publish-progress-item"
+                data-progress="2"
+            >
+
+                <span>2</span>
+
+                <div>
+                    <strong>Viaje</strong>
+                    <small>Fecha y vehículo</small>
+                </div>
+
+            </div>
+
+
+            <div class="publish-progress-line"></div>
+
+
+            <div
+                class="publish-progress-item"
+                data-progress="3"
+            >
+
+                <span>3</span>
+
+                <div>
+                    <strong>Detalles</strong>
+                    <small>Lugares y costo</small>
+                </div>
+
+            </div>
+
+
+            <div class="publish-progress-line"></div>
+
+
+            <div
+                class="publish-progress-item"
+                data-progress="4"
+            >
+
+                <span>4</span>
+
+                <div>
+                    <strong>Confirmar</strong>
+                    <small>Revisa tu viaje</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SIN VEHÍCULOS -->
+
+        <div
+            class="publish-no-vehicle"
+            id="publishNoVehicle"
+        >
+
+            <div class="publish-no-vehicle-icon">
+                <i class="fa-solid fa-car-side"></i>
+            </div>
+
+            <div>
+
+                <span>ANTES DE COMENZAR</span>
+
+                <h2>Necesitas registrar un vehículo</h2>
+
+                <p>
+                    Para publicar un viaje debes tener al menos
+                    un automóvil asociado a tu perfil de conductor.
+                </p>
+
+            </div>
+
+            <a
+                href="vehiculos.html?return=publicar"
+                class="btn btn-primary"
+            >
+                Registrar vehículo
+
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <!-- FORMULARIO -->
+
+        <form
+            class="publish-form"
+            id="publishTripForm"
+        >
+
+            <!-- =================================================
+                 PASO 1
+            ================================================== -->
+
+            <section
+                class="publish-step active"
+                data-step="1"
+            >
+
+                <div class="publish-step-header">
+
+                    <div class="publish-step-number">
+                        01
+                    </div>
+
+                    <div>
+                        <span>DEFINE TU CAMINO</span>
+                        <h2>¿A dónde vas?</h2>
+
+                        <p>
+                            Comienza indicando desde qué zona de la
+                            universidad saldrás y cuál es tu destino final.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="publish-route-layout">
+
+                    <div class="publish-route-form">
+
+                        <div class="publish-field">
+
+                            <label for="publishOrigin">
+                                Punto de salida
+                            </label>
+
+
+                            <div class="publish-input-wrapper">
+
+                                <i class="fa-regular fa-circle-dot"></i>
+
+                                <select
+                                    id="publishOrigin"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Selecciona un acceso de la UAA
+                                    </option>
+
+                                    <option value="Acceso Norte UAA">
+                                        Acceso Norte UAA
+                                    </option>
+
+                                    <option value="Acceso Sur UAA">
+                                        Acceso Sur UAA
+                                    </option>
+
+                                    <option value="Acceso Oriente UAA">
+                                        Acceso Oriente UAA
+                                    </option>
+
+                                    <option value="Acceso Poniente UAA">
+                                        Acceso Poniente UAA
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="publish-route-connector">
+
+                            <span></span>
+                            <div></div>
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="publish-field">
+
+                            <label for="publishDestination">
+                                Destino final
+                            </label>
+
+
+                            <div class="publish-input-wrapper">
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                <input
+                                    type="text"
+                                    id="publishDestination"
+                                    placeholder="Ej. Rincón de Romos"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="publish-field publish-route-description">
+
+                            <label for="publishRoute">
+                                Ruta aproximada
+                            </label>
+
+                            <textarea
+                                id="publishRoute"
+                                rows="4"
+                                placeholder="Ej. Av. Universidad → Jesús María → San Francisco de los Romo → Rincón de Romos"
+                                required
+                            ></textarea>
+
+                            <small>
+                                Después podremos reemplazar este campo
+                                por una ruta generada automáticamente con mapas.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MAPA -->
+
+                    <div class="publish-map-preview">
+
+                        <div class="publish-map-label">
+
+                            <i class="fa-solid fa-route"></i>
+
+                            <span>
+                                Vista previa de la ruta
+                            </span>
+
+                        </div>
+
+
+                        <div class="publish-map-canvas">
+
+                            <div class="publish-map-road road-1"></div>
+                            <div class="publish-map-road road-2"></div>
+                            <div class="publish-map-road road-3"></div>
+                            <div class="publish-map-road road-4"></div>
+
+
+                            <div class="publish-route-blue route-blue-1"></div>
+                            <div class="publish-route-blue route-blue-2"></div>
+
+
+                            <div class="publish-map-start">
+
+                                <span>
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </span>
+
+                                <div>
+                                    <small>ORIGEN</small>
+                                    <strong id="mapOriginText">
+                                        UAA
+                                    </strong>
+                                </div>
+
+                            </div>
+
+
+                            <div class="publish-map-end">
+
+                                <span>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </span>
+
+                                <div>
+                                    <small>DESTINO</small>
+                                    <strong id="mapDestinationText">
+                                        Tu destino
+                                    </strong>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="publish-step-actions">
+
+                    <a
+                        href="dashboard.html"
+                        class="publish-cancel-link"
+                    >
+                        Cancelar
+                    </a>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-primary publish-next"
+                        data-next="2"
+                    >
+                        Continuar
+
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 PASO 2
+            ================================================== -->
+
+            <section
+                class="publish-step"
+                data-step="2"
+            >
+
+                <div class="publish-step-header">
+
+                    <div class="publish-step-number">
+                        02
+                    </div>
+
+                    <div>
+                        <span>ORGANIZA TU VIAJE</span>
+
+                        <h2>¿Cuándo sales?</h2>
+
+                        <p>
+                            Selecciona la fecha, hora y el vehículo
+                            que utilizarás.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="publish-details-grid">
+
+                    <div class="publish-field">
+
+                        <label for="publishDate">
+                            Fecha
+                        </label>
+
+                        <div class="publish-input-wrapper">
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            <input
+                                type="date"
+                                id="publishDate"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="publish-field">
+
+                        <label for="publishTime">
+                            Hora de salida
+                        </label>
+
+                        <div class="publish-input-wrapper">
+
+                            <i class="fa-regular fa-clock"></i>
+
+                            <input
+                                type="time"
+                                id="publishTime"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="publish-vehicle-section">
+
+                    <div class="publish-vehicle-heading">
+
+                        <div>
+                            <span>VEHÍCULO</span>
+
+                            <h3>
+                                ¿Qué automóvil usarás?
+                            </h3>
+                        </div>
+
+
+                        <a href="vehiculos.html">
+                            Administrar vehículos
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </div>
+
+
+                    <div
+                        class="publish-vehicle-options"
+                        id="publishVehicleOptions"
+                    >
+                        <!-- JS -->
+                    </div>
+
+                </div>
+
+
+                <div class="publish-step-actions">
+
+                    <button
+                        type="button"
+                        class="publish-back"
+                        data-back="1"
+                    >
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Regresar
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-primary publish-next"
+                        data-next="3"
+                    >
+                        Continuar
+
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 PASO 3
+            ================================================== -->
+
+            <section
+                class="publish-step"
+                data-step="3"
+            >
+
+                <div class="publish-step-header">
+
+                    <div class="publish-step-number">
+                        03
+                    </div>
+
+                    <div>
+                        <span>CONFIGURA TU VIAJE</span>
+
+                        <h2>Lugares y costo</h2>
+
+                        <p>
+                            Define cuántos estudiantes podrán acompañarte
+                            y cuánto costará cada lugar.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="publish-capacity-grid">
+
+                    <!-- LUGARES -->
+
+                    <div class="publish-capacity-card">
+
+                        <div class="publish-capacity-icon">
+                            <i class="fa-solid fa-user-group"></i>
+                        </div>
+
+                        <span>LUGARES DISPONIBLES</span>
+
+                        <h3>
+                            ¿Cuántas personas pueden viajar?
+                        </h3>
+
+
+                        <div class="seat-counter">
+
+                            <button
+                                type="button"
+                                id="decreaseSeats"
+                            >
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+
+
+                            <div>
+                                <strong id="seatCount">
+                                    3
+                                </strong>
+
+                                <span>lugares</span>
+                            </div>
+
+
+                            <button
+                                type="button"
+                                id="increaseSeats"
+                            >
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- COSTO -->
+
+                    <div class="publish-capacity-card">
+
+                        <div class="publish-capacity-icon">
+                            <i class="fa-solid fa-wallet"></i>
+                        </div>
+
+                        <span>COSTO POR PERSONA</span>
+
+                        <h3>
+                            ¿Cuánto aportará cada pasajero?
+                        </h3>
+
+
+                        <div class="publish-price-input">
+
+                            <span>$</span>
+
+                            <input
+                                type="number"
+                                id="publishPrice"
+                                min="0"
+                                max="500"
+                                step="5"
+                                value="35"
+                                required
+                            >
+
+                            <small>MXN</small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="publish-cost-message">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <div>
+                        <strong>
+                            La idea es compartir gastos.
+                        </strong>
+
+                        <p>
+                            UAAventón busca hacer más accesible el transporte
+                            entre estudiantes, no funcionar como un servicio
+                            de taxi.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="publish-step-actions">
+
+                    <button
+                        type="button"
+                        class="publish-back"
+                        data-back="2"
+                    >
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Regresar
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-primary publish-next"
+                        data-next="4"
+                    >
+                        Revisar viaje
+
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 PASO 4
+            ================================================== -->
+
+            <section
+                class="publish-step"
+                data-step="4"
+            >
+
+                <div class="publish-step-header">
+
+                    <div class="publish-step-number">
+                        04
+                    </div>
+
+                    <div>
+                        <span>ÚLTIMO PASO</span>
+
+                        <h2>Revisa tu viaje</h2>
+
+                        <p>
+                            Confirma que toda la información sea correcta
+                            antes de publicarlo.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="publish-summary-layout">
+
+                    <!-- RESUMEN -->
+
+                    <div class="publish-summary-card">
+
+                        <div class="publish-summary-route">
+
+                            <div class="summary-route-line">
+
+                                <span></span>
+                                <div></div>
+                                <span></span>
+
+                            </div>
+
+
+                            <div class="summary-route-content">
+
+                                <div>
+                                    <small>ORIGEN</small>
+
+                                    <strong id="summaryOrigin">
+                                        -
+                                    </strong>
+                                </div>
+
+
+                                <div>
+                                    <small>DESTINO FINAL</small>
+
+                                    <strong id="summaryDestination">
+                                        -
+                                    </strong>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="summary-route-description">
+
+                            <i class="fa-solid fa-route"></i>
+
+                            <div>
+                                <small>RUTA</small>
+
+                                <span id="summaryRoute">
+                                    -
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="publish-summary-data">
+
+                            <div>
+                                <i class="fa-regular fa-calendar"></i>
+
+                                <span>
+                                    <small>FECHA</small>
+                                    <strong id="summaryDate">-</strong>
+                                </span>
+                            </div>
+
+
+                            <div>
+                                <i class="fa-regular fa-clock"></i>
+
+                                <span>
+                                    <small>HORA</small>
+                                    <strong id="summaryTime">-</strong>
+                                </span>
+                            </div>
+
+
+                            <div>
+                                <i class="fa-solid fa-user-group"></i>
+
+                                <span>
+                                    <small>LUGARES</small>
+                                    <strong id="summarySeats">-</strong>
+                                </span>
+                            </div>
+
+
+                            <div>
+                                <i class="fa-solid fa-wallet"></i>
+
+                                <span>
+                                    <small>POR PERSONA</small>
+                                    <strong id="summaryPrice">-</strong>
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- VEHÍCULO -->
+
+                    <aside class="publish-summary-vehicle">
+
+                        <span>VIAJARÁS EN</span>
+
+                        <div class="summary-car-icon">
+                            <i class="fa-solid fa-car-side"></i>
+                        </div>
+
+                        <h3 id="summaryVehicle">
+                            -
+                        </h3>
+
+                        <p id="summaryVehicleInfo">
+                            -
+                        </p>
+
+
+                        <div class="summary-driver">
+
+                            <div>
+                                FA
+                            </div>
+
+                            <span>
+                                <small>CONDUCTOR</small>
+                                <strong>Fabricio Ávila</strong>
+                            </span>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+
+                <div class="publish-confirmation">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            id="publishConfirmation"
+                        >
+
+                        <span>
+                            Confirmo que la información del viaje es correcta
+                            y que cumpliré con el trayecto publicado.
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="publish-step-actions">
+
+                    <button
+                        type="button"
+                        class="publish-back"
+                        data-back="3"
+                    >
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Regresar
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary publish-final-button"
+                    >
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        Publicar viaje
+                    </button>
+
+                </div>
+
+            </section>
+
+        </form>
+
+    </div>
+
+</main>
+
+
+<!-- =====================================================
+     MODAL VIAJE PUBLICADO
+===================================================== -->
+
+<div
+    class="publish-success-modal"
+    id="publishSuccessModal"
+>
+
+    <div class="vehicle-modal-overlay"></div>
+
+
+    <div class="publish-success-card">
+
+        <div class="publish-success-icon">
+            <i class="fa-solid fa-check"></i>
+        </div>
+
+        <span>VIAJE PUBLICADO</span>
+
+        <h2>¡Tu viaje ya está disponible!</h2>
+
+        <p>
+            Los estudiantes podrán encontrarlo y solicitar
+            un lugar dentro de tu ruta.
+        </p>
+
+
+        <div class="published-trip-mini">
+
+            <div>
+                <small>TRAYECTO</small>
+
+                <strong id="successRoute">
+                    UAA → Destino
+                </strong>
+            </div>
+
+
+            <div>
+                <small>PRECIO</small>
+
+                <strong id="successPrice">
+                    $0
+                </strong>
+            </div>
+
+        </div>
+
+
+        <a
+            href="mis-viajes.html"
+            class="btn btn-primary publish-success-main"
+        >
+            Ver mis viajes
+
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+
+        <a
+            href="dashboard.html"
+            class="publish-success-secondary"
+        >
+            Volver al inicio
+        </a>
+
+    </div>
+
+</div>
+
+
+<nav class="bottom-navigation">
+
+    <a href="dashboard.html" class="bottom-nav-item">
+        <i class="fa-solid fa-house"></i>
+        <span>Inicio</span>
+    </a>
+
+    <a href="buscar.html" class="bottom-nav-item">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>Buscar</span>
+    </a>
+
+
+    <a
+        href="publicar.html"
+        class="bottom-nav-item publish-item active"
+    >
+
+        <div class="publish-button">
+            <i class="fa-solid fa-plus"></i>
+        </div>
+
+        <span>Publicar</span>
+
+    </a>
+
+
+    <a href="mis-viajes.html" class="bottom-nav-item">
+        <i class="fa-solid fa-route"></i>
+        <span>Viajes</span>
+    </a>
+
+    <a href="perfil.html" class="bottom-nav-item">
+        <i class="fa-regular fa-user"></i>
+        <span>Perfil</span>
+    </a>
+
+</nav>
+
+
+<script src="js/app.js"></script>
+<script src="js/vehiculos.js"></script>
+<script src="js/publicar.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mis viajes | UAAventón</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="app-body">
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header app-header">
+
+    <div class="container nav-container">
+
+        <a href="dashboard.html" class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-route"></i>
+            </div>
+
+            <span>UAA<span>ventón</span></span>
+
+        </a>
+
+
+        <nav class="desktop-nav">
+
+            <a href="dashboard.html" class="nav-link">
+                Inicio
+            </a>
+
+            <a href="buscar.html" class="nav-link">
+                Buscar viaje
+            </a>
+
+            <a href="publicar.html" class="nav-link">
+                Publicar viaje
+            </a>
+
+            <a href="mis-viajes.html" class="nav-link active">
+                Mis viajes
+            </a>
+
+        </nav>
+
+
+        <div class="dashboard-user">
+
+            <button class="notification-button">
+                <i class="fa-regular fa-bell"></i>
+                <span></span>
+            </button>
+
+
+            <a href="perfil.html" class="dashboard-profile">
+
+                <div class="dashboard-avatar">
+                </div>
+
+                <div>
+                    <strong></strong>
+                    <small>Estudiante</small>
+                </div>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     CONTENIDO
+===================================================== -->
+
+<main class="my-trips-page">
+
+    <div class="container">
+
+        <!-- ENCABEZADO -->
+
+        <div class="my-trips-heading">
+
+            <div>
+
+                <span class="section-eyebrow">
+                    TU MOVILIDAD
+                </span>
+
+                <h1>Mis viajes</h1>
+
+                <p>
+                    Consulta y administra todos los trayectos
+                    en los que participas.
+                </p>
+
+            </div>
+
+
+            <a
+                href="publicar.html"
+                class="btn btn-primary"
+            >
+                <i class="fa-solid fa-plus"></i>
+                Publicar viaje
+            </a>
+
+        </div>
+
+
+        <!-- =================================================
+             RESUMEN
+        ================================================== -->
+
+        <div class="my-trips-stats">
+
+            <div class="my-trip-stat">
+
+                <div class="my-trip-stat-icon">
+                    <i class="fa-solid fa-route"></i>
+                </div>
+
+                <div>
+                    <span>PRÓXIMOS</span>
+
+                    <strong id="upcomingTripsCount">
+                        0
+                    </strong>
+
+                    <small>viajes</small>
+                </div>
+
+            </div>
+
+
+            <div class="my-trip-stat">
+
+                <div class="my-trip-stat-icon active">
+                    <i class="fa-solid fa-car-side"></i>
+                </div>
+
+                <div>
+                    <span>ACTIVOS</span>
+
+                    <strong id="activeTripsCount">
+                        0
+                    </strong>
+
+                    <small>viajes</small>
+                </div>
+
+            </div>
+
+            <div class="my-trip-stat">
+
+                <div class="my-trip-stat-icon completed">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <div>
+                    <span>FINALIZADOS</span>
+
+                    <strong id="finishedTripsCount">
+                        0
+                    </strong>
+
+                    <small>viajes</small>
+                </div>
+
+            </div>
+
+
+            <div class="my-trip-stat">
+
+                <div class="my-trip-stat-icon">
+                    <i class="fa-solid fa-ban"></i>
+                </div>
+
+                <div>
+                    <span>CANCELADOS</span>
+
+                    <strong id="cancelledTripsCount">
+                        0
+                    </strong>
+
+                    <small>viajes</small>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =================================================
+             TABS
+        ================================================== -->
+
+        <div class="my-trips-tabs">
+
+            <button
+                type="button"
+                class="my-trips-tab active"
+                data-tab="upcoming"
+            >
+                Próximos
+
+                <span id="upcomingTabCount">
+                    0
+                </span>
+            </button>
+
+
+            <button
+                type="button"
+                class="my-trips-tab"
+                data-tab="active"
+            >
+                Activos
+
+                <span id="activeTabCount">
+                    0
+                </span>
+            </button>
+
+
+            <button
+                type="button"
+                class="my-trips-tab"
+                data-tab="finished"
+            >
+                Finalizados
+
+                <span id="finishedTabCount">
+                    0
+                </span>
+            </button>
+
+            <button
+                type="button"
+                class="my-trips-tab"
+                data-tab="cancelled"
+            >
+                Cancelados
+
+                <span id="cancelledTabCount">
+                    0
+                </span>
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             PRÓXIMOS
+        ================================================== -->
+
+        <section
+            class="my-trips-content active"
+            data-content="upcoming"
+        >
+
+            <div
+                class="my-trips-list"
+                id="upcomingTripsList"
+            >
+                <!-- JS -->
+            </div>
+
+
+            <div
+                class="my-trips-empty"
+                id="upcomingEmpty"
+            >
+
+                <div>
+                    <i class="fa-regular fa-calendar"></i>
+                </div>
+
+                <h3>No tienes viajes próximos</h3>
+
+                <p>
+                    Publica un viaje o encuentra uno que vaya
+                    hacia tu próximo destino.
+                </p>
+
+
+                <div class="empty-trip-actions">
+
+                    <a
+                        href="buscar.html"
+                        class="btn empty-secondary-button"
+                    >
+                        Buscar viaje
+                    </a>
+
+                    <a
+                        href="publicar.html"
+                        class="btn btn-primary"
+                    >
+                        Publicar viaje
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ACTIVOS
+        ================================================== -->
+
+        <section
+            class="my-trips-content"
+            data-content="active"
+        >
+
+            <div
+                class="my-trips-list"
+                id="activeTripsList"
+            >
+                <!-- JS -->
+            </div>
+
+
+            <div
+                class="my-trips-empty"
+                id="activeEmpty"
+            >
+
+                <div>
+                    <i class="fa-solid fa-car-side"></i>
+                </div>
+
+                <h3>No hay viajes activos</h3>
+
+                <p>
+                    Cuando llegue la hora de alguno de tus trayectos,
+                    podrás administrarlo desde aquí.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FINALIZADOS
+        ================================================== -->
+
+        <section
+            class="my-trips-content"
+            data-content="finished"
+        >
+
+            <div
+                class="my-trips-list"
+                id="finishedTripsList"
+            >
+                <!-- JS -->
+            </div>
+
+
+            <div
+                class="my-trips-empty"
+                id="finishedEmpty"
+            >
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <h3>Aún no tienes viajes finalizados</h3>
+
+                <p>
+                    Aquí aparecerá el historial de tus trayectos
+                    completados en UAAventón.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- =================================================
+            CANCELADOS
+        ================================================== -->
+
+        <section
+            class="my-trips-content"
+            data-content="cancelled"
+        >
+
+            <div
+                class="my-trips-list"
+                id="cancelledTripsList"
+            >
+                <!-- JS -->
+            </div>
+
+
+            <div
+                class="my-trips-empty"
+                id="cancelledEmpty"
+            >
+
+                <div>
+                    <i class="fa-solid fa-ban"></i>
+                </div>
+
+                <h3>No tienes viajes cancelados</h3>
+
+                <p>
+                    Los trayectos que hayas cancelado
+                    aparecerán aquí.
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<!-- =====================================================
+     MODAL ADMINISTRAR VIAJE
+===================================================== -->
+
+<div
+    class="manage-trip-modal"
+    id="manageTripModal"
+>
+
+    <div class="vehicle-modal-overlay"></div>
+
+
+    <div class="manage-trip-card">
+
+        <button
+            type="button"
+            class="modal-close"
+            id="closeManageTrip"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <div class="manage-trip-icon">
+
+            <i class="fa-solid fa-route"></i>
+
+        </div>
+
+
+       <span id="manageTripEyebrow">
+            ADMINISTRAR VIAJE
+        </span>
+
+
+        <h2 id="manageTripTitle">
+            Tu viaje
+        </h2>
+
+
+        <p id="manageTripDescription">
+            Consulta la información y administra el estado
+            de este trayecto.
+        </p>
+
+
+        <div class="manage-trip-information">
+
+            <div>
+
+                <small>FECHA</small>
+
+                <strong id="manageTripDate">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <small>HORA</small>
+
+                <strong id="manageTripTime">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <small id="manageTripSeatsLabel">
+                    LUGARES
+                </small>
+
+                <strong id="manageTripSeats">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <small>PRECIO</small>
+
+                <strong id="manageTripPrice">
+                    -
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- SOLICITUDES DE PASAJEROS -->
+
+            <div
+                class="manage-trip-requests"
+                id="manageTripRequests"
+            >
+            </div>
+
+
+        <div
+            class="manage-driver-actions"
+            id="manageDriverActions"
+        >
+
+            <button
+                type="button"
+                class="btn start-trip-button"
+                id="startTripButton"
+            >
+                <i class="fa-solid fa-play"></i>
+                Iniciar viaje
+            </button>
+
+
+            <button
+                type="button"
+                class="btn finish-trip-button"
+                id="finishTripButton"
+            >
+                <i class="fa-solid fa-flag-checkered"></i>
+                Finalizar viaje
+            </button>
+
+
+            <button
+                type="button"
+                class="cancel-trip-button"
+                id="cancelTripButton"
+            >
+                Cancelar viaje
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     CONFIRMACIÓN CANCELAR
+===================================================== -->
+
+<div
+    class="trip-confirm-modal"
+    id="cancelTripModal"
+>
+
+    <div class="vehicle-modal-overlay"></div>
+
+
+    <div class="trip-confirm-card">
+
+        <div class="trip-confirm-icon danger">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
+
+        <span>CANCELAR VIAJE</span>
+
+        <h3>
+            ¿Seguro que quieres cancelar?
+        </h3>
+
+        <p>
+            El viaje dejará de estar disponible para
+            los demás estudiantes.
+        </p>
+
+
+        <div class="trip-confirm-actions">
+
+            <button
+                type="button"
+                class="btn empty-secondary-button"
+                id="keepTripButton"
+            >
+                Conservar viaje
+            </button>
+
+
+            <button
+                type="button"
+                class="btn confirm-cancel-trip"
+                id="confirmCancelTrip"
+            >
+                Sí, cancelar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     MOBILE NAV
+===================================================== -->
+
+<nav class="bottom-navigation">
+
+    <a
+        href="dashboard.html"
+        class="bottom-nav-item"
+    >
+        <i class="fa-solid fa-house"></i>
+        <span>Inicio</span>
+    </a>
+
+
+    <a
+        href="buscar.html"
+        class="bottom-nav-item"
+    >
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>Buscar</span>
+    </a>
+
+
+    <a
+        href="publicar.html"
+        class="bottom-nav-item publish-item"
+    >
+
+        <div class="publish-button">
+            <i class="fa-solid fa-plus"></i>
+        </div>
+
+        <span>Publicar</span>
+
+    </a>
+
+
+    <a
+        href="mis-viajes.html"
+        class="bottom-nav-item active"
+    >
+        <i class="fa-solid fa-route"></i>
+        <span>Viajes</span>
+    </a>
+
+
+    <a
+        href="perfil.html"
+        class="bottom-nav-item"
+    >
+        <i class="fa-regular fa-user"></i>
+        <span>Perfil</span>
+    </a>
+
+</nav>
+
+
+<script src="js/app.js"></script>
+<script src="js/mis-viajes.js"></script>
+
+</body>
+</html>

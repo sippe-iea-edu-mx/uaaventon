@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iniciar sesión | UAAventón</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="auth-body">
+
+    <main class="auth-page">
+
+        <!-- IZQUIERDA -->
+
+        <section class="auth-brand-panel">
+
+            <a href="index.html" class="logo auth-logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-route"></i>
+                </div>
+
+                <span>UAA<span>ventón</span></span>
+            </a>
+
+            <div class="auth-brand-content">
+
+                <span class="auth-eyebrow">
+                    COMUNIDAD UAA
+                </span>
+
+                <h1>
+                    Tu próximo viaje
+                    <span>empieza aquí.</span>
+                </h1>
+
+                <p>
+                    Conecta con otros estudiantes, comparte el camino
+                    y reduce tus gastos de transporte.
+                </p>
+
+                <div class="auth-route-preview">
+
+                    <div class="auth-route-row">
+                        <div class="auth-route-point blue"></div>
+
+                        <div>
+                            <small>SALIDA</small>
+                            <strong>Universidad Autónoma de Aguascalientes</strong>
+                        </div>
+                    </div>
+
+                    <div class="auth-route-line"></div>
+
+                    <div class="auth-route-row">
+                        <div class="auth-route-point green"></div>
+
+                        <div>
+                            <small>DESTINO</small>
+                            <strong>Tu próximo destino</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="auth-brand-footer">
+                Exclusivo para la comunidad universitaria.
+            </p>
+
+        </section>
+
+
+        <!-- DERECHA -->
+
+        <section class="auth-form-panel">
+
+            <div class="auth-form-wrapper">
+
+                <div class="auth-mobile-logo">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <i class="fa-solid fa-route"></i>
+                        </div>
+
+                        <span>UAA<span>ventón</span></span>
+                    </a>
+                </div>
+
+                <div class="auth-heading">
+
+                    <span class="auth-small-title">
+                        BIENVENIDO DE NUEVO
+                    </span>
+
+                    <h2>Inicia sesión</h2>
+
+                    <p>
+                        Ingresa tus datos para continuar.
+                    </p>
+
+                </div>
+
+
+                <form class="auth-form" id="loginForm">
+
+                    <div class="form-group">
+
+                        <label for="loginId">
+                            ID universitario
+                        </label>
+
+                        <div class="input-container">
+
+                            <i class="fa-regular fa-id-card"></i>
+
+                            <input
+                                type="text"
+                                id="loginId"
+                                placeholder="Ej. 549789"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <div class="label-row">
+                            <label for="loginPassword">
+                                Contraseña
+                            </label>
+
+                            <a href="#" class="form-link">
+                                ¿La olvidaste?
+                            </a>
+                        </div>
+
+                        <div class="input-container">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Ingresa tu contraseña"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-password-target="loginPassword"
+                                aria-label="Mostrar contraseña"
+                            >
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="checkbox-row">
+
+                        <input type="checkbox">
+
+                        <span class="custom-checkbox">
+                            <i class="fa-solid fa-check"></i>
+                        </span>
+
+                        <span>
+                            Mantener mi sesión iniciada
+                        </span>
+
+                    </label>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary auth-submit"
+                    >
+                        Iniciar sesión
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
+
+                <div class="auth-divider">
+                    <span></span>
+                    <p>¿Aún no tienes cuenta?</p>
+                    <span></span>
+                </div>
+
+
+                <a
+                    href="registro.html"
+                    class="btn btn-outline auth-secondary-button"
+                >
+                    Crear una cuenta
+                </a>
+
+
+                <p class="auth-terms">
+                    Al continuar aceptas los
+                    <a href="#">Términos de uso</a>
+                    y el
+                    <a href="#">Aviso de privacidad</a>.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

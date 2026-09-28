@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crear cuenta | UAAventón</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="auth-body">
+
+    <main class="auth-page register-page">
+
+        <!-- PANEL IZQUIERDO -->
+
+        <section class="auth-brand-panel register-brand-panel">
+
+            <a href="index.html" class="logo auth-logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-route"></i>
+                </div>
+
+                <span>UAA<span>ventón</span></span>
+            </a>
+
+
+            <div class="auth-brand-content">
+
+                <span class="auth-eyebrow">
+                    ÚNETE A UAAventón
+                </span>
+
+                <h1>
+                    La comunidad se mueve
+                    <span>mejor junta.</span>
+                </h1>
+
+                <p>
+                    Crea tu cuenta y comienza a encontrar estudiantes
+                    que comparten tu camino.
+                </p>
+
+
+                <div class="register-benefits">
+
+                    <div class="register-benefit">
+
+                        <div>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+
+                        <span>
+                            Encuentra viajes compatibles con tu destino.
+                        </span>
+
+                    </div>
+
+
+                    <div class="register-benefit">
+
+                        <div>
+                            <i class="fa-solid fa-route"></i>
+                        </div>
+
+                        <span>
+                            Elige puntos intermedios dentro de la ruta.
+                        </span>
+
+                    </div>
+
+
+                    <div class="register-benefit">
+
+                        <div>
+                            <i class="fa-solid fa-car"></i>
+                        </div>
+
+                        <span>
+                            Activa tu perfil de conductor cuando quieras.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FORMULARIO -->
+
+        <section class="auth-form-panel register-form-panel">
+
+            <div class="auth-form-wrapper register-wrapper">
+
+                <div class="auth-mobile-logo">
+
+                    <a href="index.html" class="logo">
+
+                        <div class="logo-icon">
+                            <i class="fa-solid fa-route"></i>
+                        </div>
+
+                        <span>UAA<span>ventón</span></span>
+
+                    </a>
+
+                </div>
+
+
+                <div class="auth-heading">
+
+                    <span class="auth-small-title">
+                        CREA TU CUENTA
+                    </span>
+
+                    <h2>Comienza tu camino</h2>
+
+                    <p>
+                        Necesitamos algunos datos para identificarte
+                        como estudiante.
+                    </p>
+
+                </div>
+
+
+                <form class="auth-form" id="registerForm">
+
+                    <div class="form-grid-two">
+
+                        <div class="form-group">
+
+                            <label for="registerName">
+                                Nombre
+                            </label>
+
+                            <div class="input-container">
+
+                                <i class="fa-regular fa-user"></i>
+
+                                <input
+                                    type="text"
+                                    id="registerName"
+                                    placeholder="Tu nombre"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="registerLastName">
+                                Apellidos
+                            </label>
+
+                            <div class="input-container">
+
+                                <i class="fa-regular fa-user"></i>
+
+                                <input
+                                    type="text"
+                                    id="registerLastName"
+                                    placeholder="Tus apellidos"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-grid-two">
+
+                        <div class="form-group">
+
+                            <label for="registerId">
+                                ID universitario
+                            </label>
+
+                            <div class="input-container">
+
+                                <i class="fa-regular fa-id-card"></i>
+
+                                <input
+                                    type="text"
+                                    id="registerId"
+                                    placeholder="Ej. 549789"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="registerSex">
+                                Sexo
+                            </label>
+
+                            <div class="input-container">
+
+                                <i class="fa-solid fa-venus-mars"></i>
+
+                                <select id="registerSex" required>
+                                    <option value="">
+                                        Seleccionar
+                                    </option>
+
+                                    <option value="masculino">
+                                        Masculino
+                                    </option>
+
+                                    <option value="femenino">
+                                        Femenino
+                                    </option>
+
+                                    <option value="otro">
+                                        Otro
+                                    </option>
+
+                                    <option value="no-indicar">
+                                        Prefiero no indicar
+                                    </option>
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="registerEmail">
+                            Correo electrónico
+                        </label>
+
+                        <div class="input-container">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="registerEmail"
+                                placeholder="correo@ejemplo.com"
+                                required
+                            >
+
+                        </div>
+
+                        <small class="input-help">
+                            Utilizaremos este correo para notificaciones
+                            relacionadas con tus viajes.
+                        </small>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="registerPassword">
+                            Contraseña
+                        </label>
+
+                        <div class="input-container">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="registerPassword"
+                                placeholder="Mínimo 8 caracteres"
+                                minlength="8"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-password-target="registerPassword"
+                            >
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONDUCTOR -->
+
+                    <div class="driver-option-card">
+
+                        <div class="driver-option-icon">
+                            <i class="fa-solid fa-car"></i>
+                        </div>
+
+                        <div class="driver-option-text">
+                            <strong>¿También quieres conducir?</strong>
+
+                            <p>
+                                No necesitas decidirlo ahora. Podrás activar
+                                tu perfil de conductor y registrar tus
+                                vehículos desde tu perfil.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <label class="checkbox-row terms-checkbox">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            required
+                        >
+
+                        <span class="custom-checkbox">
+                            <i class="fa-solid fa-check"></i>
+                        </span>
+
+                        <span>
+                            Acepto los
+                            <a href="#">Términos de uso</a>
+                            y el
+                            <a href="#">Aviso de privacidad</a>.
+                        </span>
+
+                    </label>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary auth-submit"
+                    >
+                        Crear mi cuenta
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
+
+                <p class="login-redirect">
+                    ¿Ya tienes una cuenta?
+                    <a href="login.html">
+                        Inicia sesión
+                    </a>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

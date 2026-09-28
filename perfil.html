@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Mi perfil | UAAventón</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+
+</head>
+
+
+<body class="app-body">
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header app-header">
+
+    <div class="container nav-container">
+
+        <a
+            href="dashboard.html"
+            class="logo"
+        >
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-route"></i>
+            </div>
+
+            <span>
+                UAA<span>ventón</span>
+            </span>
+
+        </a>
+
+
+        <nav class="desktop-nav">
+
+            <a
+                href="dashboard.html"
+                class="nav-link"
+            >
+                Inicio
+            </a>
+
+            <a
+                href="buscar.html"
+                class="nav-link"
+            >
+                Buscar viaje
+            </a>
+
+            <a
+                href="publicar.html"
+                class="nav-link"
+            >
+                Publicar viaje
+            </a>
+
+            <a
+                href="mis-viajes.html"
+                class="nav-link"
+            >
+                Mis viajes
+            </a>
+
+        </nav>
+
+
+        <div class="dashboard-user">
+
+            <button
+                class="notification-button"
+                type="button"
+            >
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span></span>
+
+            </button>
+
+
+            <a
+                href="perfil.html"
+                class="dashboard-profile"
+            >
+
+                <div
+                    class="dashboard-avatar"
+                    id="headerProfileAvatar"
+                >
+                    UA
+                </div>
+
+
+                <div>
+
+                    <strong id="headerProfileName">
+                        Estudiante
+                    </strong>
+
+                    <small>
+                        Estudiante
+                    </small>
+
+                </div>
+
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     PERFIL
+===================================================== -->
+
+<main class="profile-page">
+
+    <div class="container">
+
+
+        <!-- =============================================
+             ENCABEZADO
+        ============================================== -->
+
+        <div class="profile-page-heading">
+
+            <div>
+
+                <span class="section-eyebrow">
+                    MI CUENTA
+                </span>
+
+                <h1>
+                    Mi perfil
+                </h1>
+
+                <p>
+                    Administra tu información y consulta tu
+                    actividad dentro de UAAventón.
+                </p>
+
+            </div>
+
+
+            <button
+                class="btn profile-edit-button"
+                id="openEditProfile"
+                type="button"
+            >
+
+                <i class="fa-regular fa-pen-to-square"></i>
+
+                Editar perfil
+
+            </button>
+
+        </div>
+
+
+        <!-- =============================================
+             TARJETA PRINCIPAL
+        ============================================== -->
+
+        <section class="profile-main-card">
+
+            <div class="profile-main-left">
+
+                <div
+                    class="profile-large-avatar"
+                    id="profileAvatar"
+                >
+                    UA
+                </div>
+
+
+                <div class="profile-identity">
+
+                    <span class="profile-student-label">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        ESTUDIANTE UAA
+
+                    </span>
+
+
+                    <h2 id="profileFullName">
+                        Estudiante UAA
+                    </h2>
+
+
+                    <p>
+
+                        <i class="fa-regular fa-id-card"></i>
+
+                        ID universitario:
+
+                        <strong id="profileUniversityId">
+                            -
+                        </strong>
+
+                    </p>
+
+
+                    <div class="profile-verified">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Cuenta universitaria
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-main-info">
+
+                <div class="profile-info-item">
+
+                    <span>
+                        CORREO
+                    </span>
+
+                    <strong id="profileEmail">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-info-item">
+
+                    <span>
+                        SEXO
+                    </span>
+
+                    <strong id="profileSex">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-info-item">
+
+                    <span>
+                        MIEMBRO DESDE
+                    </span>
+
+                    <strong id="profileMemberSince">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =============================================
+             ESTADÍSTICAS
+        ============================================== -->
+
+        <section class="profile-section">
+
+            <div class="profile-section-heading">
+
+                <div>
+
+                    <span>
+                        TU ACTIVIDAD
+                    </span>
+
+                    <h2>
+                        UAAventón en números
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-stats-grid">
+
+
+                <article class="profile-stat-card">
+
+                    <div class="profile-stat-icon">
+
+                        <i class="fa-solid fa-route"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            VIAJES REALIZADOS
+                        </span>
+
+                        <strong id="profileCompletedTrips">
+                            0
+                        </strong>
+
+                        <small>
+                            Viajes finalizados
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <article class="profile-stat-card">
+
+                    <div class="profile-stat-icon">
+
+                        <i class="fa-solid fa-car-side"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            COMO CONDUCTOR
+                        </span>
+
+                        <strong id="profileDriverTrips">
+                            0
+                        </strong>
+
+                        <small>
+                            Viajes publicados
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <article class="profile-stat-card">
+
+                    <div class="profile-stat-icon">
+
+                        <i class="fa-solid fa-user-group"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            COMO PASAJERO
+                        </span>
+
+                        <strong id="profilePassengerTrips">
+                            0
+                        </strong>
+
+                        <small>
+                            Solicitudes y viajes
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <article class="profile-stat-card">
+
+                    <div class="profile-stat-icon">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            CALIFICACIÓN
+                        </span>
+
+                        <strong id="profileRating">
+                            -
+                        </strong>
+
+                        <small id="profileRatingText">
+                            Sin calificaciones
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =============================================
+             CONDUCTOR + VEHÍCULOS
+        ============================================== -->
+
+        <section class="profile-driver-layout">
+
+
+            <!-- PERFIL CONDUCTOR -->
+
+            <article class="profile-driver-card">
+
+                <div class="profile-driver-card-top">
+
+                    <div class="profile-driver-icon">
+
+                        <i class="fa-solid fa-car"></i>
+
+                    </div>
+
+
+                    <span>
+                        PERFIL DE CONDUCTOR
+                    </span>
+
+                </div>
+
+
+                <h2>
+                    Comparte el camino.
+                </h2>
+
+
+                <p>
+                    Publica tus trayectos, comparte los gastos
+                    del viaje y conecta con otros estudiantes
+                    que van hacia tu misma dirección.
+                </p>
+
+
+                <div class="profile-driver-features">
+
+
+                    <div>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        <span>
+                            Publica viajes desde la UAA
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        <span>
+                            Administra solicitudes de pasajeros
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        <span>
+                            Utiliza cualquiera de tus vehículos
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+                <a
+                    href="publicar.html"
+                    class="btn btn-primary"
+                >
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Publicar un viaje
+
+                </a>
+
+            </article>
+
+
+            <!-- VEHÍCULOS -->
+
+            <article class="profile-vehicles-card">
+
+                <div class="profile-vehicles-heading">
+
+                    <div>
+
+                        <span>
+                            MIS VEHÍCULOS
+                        </span>
+
+                        <h2>
+                            Vehículos registrados
+                        </h2>
+
+                    </div>
+
+
+                    <div class="profile-vehicle-counter">
+
+                        <strong id="profileVehicleCount">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="profile-vehicle-preview"
+                    id="profileVehiclePreview"
+                >
+
+                    <!-- JS -->
+
+                </div>
+
+
+                <a
+                    href="vehiculos.html"
+                    class="profile-manage-vehicles"
+                >
+
+                    <span>
+
+                        <i class="fa-solid fa-car-side"></i>
+
+                        Administrar mis vehículos
+
+                    </span>
+
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+        </section>
+
+
+        <!-- =============================================
+             HISTORIAL
+        ============================================== -->
+
+        <section class="profile-section">
+
+            <div class="profile-section-heading profile-history-heading">
+
+                <div>
+
+                    <span>
+                        ACTIVIDAD RECIENTE
+                    </span>
+
+                    <h2>
+                        Mis últimos viajes
+                    </h2>
+
+                </div>
+
+
+                <a href="mis-viajes.html">
+
+                    Ver todos
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div
+                class="profile-history-list"
+                id="profileHistoryList"
+            >
+
+                <!-- JS -->
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+<!-- =====================================================
+     MODAL EDITAR PERFIL
+===================================================== -->
+
+<div
+    class="profile-modal"
+    id="profileEditModal"
+>
+
+    <div class="profile-modal-overlay"></div>
+
+
+    <div class="profile-modal-card">
+
+        <button
+            class="modal-close"
+            id="closeEditProfile"
+            type="button"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="profile-modal-heading">
+
+            <div class="profile-modal-icon">
+
+                <i class="fa-regular fa-user"></i>
+
+            </div>
+
+
+            <span>
+                INFORMACIÓN PERSONAL
+            </span>
+
+            <h2>
+                Editar perfil
+            </h2>
+
+            <p>
+                Mantén actualizada la información de tu cuenta.
+            </p>
+
+        </div>
+
+
+        <form id="profileEditForm">
+
+            <div class="profile-form-grid">
+
+
+                <div class="profile-form-field">
+
+                    <label for="editProfileName">
+                        Nombre
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editProfileName"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="profile-form-field">
+
+                    <label for="editProfileLastName">
+                        Apellidos
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editProfileLastName"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="profile-form-field profile-form-full">
+
+                    <label for="editProfileUniversityId">
+                        ID universitario
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editProfileUniversityId"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="profile-form-field">
+
+                    <label for="editProfileSex">
+                        Sexo
+                    </label>
+
+                    <select
+                        id="editProfileSex"
+                        required
+                    >
+
+                        <option value="">
+                            Selecciona
+                        </option>
+
+                        <option value="Masculino">
+                            Masculino
+                        </option>
+
+                        <option value="Femenino">
+                            Femenino
+                        </option>
+
+                        <option value="Otro">
+                            Otro
+                        </option>
+
+                        <option value="Prefiero no decirlo">
+                            Prefiero no decirlo
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="profile-form-field">
+
+                    <label for="editProfileEmail">
+                        Correo
+                    </label>
+
+                    <input
+                        type="email"
+                        id="editProfileEmail"
+                        required
+                    >
+
+                </div>
+
+
+            </div>
+
+
+            <div class="profile-form-actions">
+
+                <button
+                    type="button"
+                    class="btn profile-cancel-button"
+                    id="cancelEditProfile"
+                >
+                    Cancelar
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+
+                    <i class="fa-solid fa-check"></i>
+
+                    Guardar cambios
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     MOBILE NAVIGATION
+===================================================== -->
+
+<nav class="bottom-navigation">
+
+    <a
+        href="dashboard.html"
+        class="bottom-nav-item"
+    >
+
+        <i class="fa-solid fa-house"></i>
+
+        <span>
+            Inicio
+        </span>
+
+    </a>
+
+
+    <a
+        href="buscar.html"
+        class="bottom-nav-item"
+    >
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <span>
+            Buscar
+        </span>
+
+    </a>
+
+
+    <a
+        href="publicar.html"
+        class="bottom-nav-item publish-item"
+    >
+
+        <div class="publish-button">
+
+            <i class="fa-solid fa-plus"></i>
+
+        </div>
+
+        <span>
+            Publicar
+        </span>
+
+    </a>
+
+
+    <a
+        href="mis-viajes.html"
+        class="bottom-nav-item"
+    >
+
+        <i class="fa-solid fa-route"></i>
+
+        <span>
+            Viajes
+        </span>
+
+    </a>
+
+
+    <a
+        href="perfil.html"
+        class="bottom-nav-item active"
+    >
+
+        <i class="fa-solid fa-user"></i>
+
+        <span>
+            Perfil
+        </span>
+
+    </a>
+
+</nav>
+
+
+<script src="js/app.js"></script>
+<script src="js/perfil.js"></script>
+
+</body>
+
+</html>

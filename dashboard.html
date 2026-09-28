@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inicio | UAAventón</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="app-body">
+
+    <!-- HEADER -->
+
+    <header class="header app-header">
+
+        <div class="container nav-container">
+
+            <a href="dashboard.html" class="logo">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-route"></i>
+                </div>
+
+                <span>UAA<span>ventón</span></span>
+
+            </a>
+
+
+            <nav class="desktop-nav">
+
+                <a
+                    href="dashboard.html"
+                    class="nav-link active"
+                >
+                    Inicio
+                </a>
+
+                <a
+                    href="buscar.html"
+                    class="nav-link"
+                >
+                    Buscar viaje
+                </a>
+
+                <a
+                    href="publicar.html"
+                    class="nav-link"
+                >
+                    Publicar viaje
+                </a>
+
+                <a
+                    href="mis-viajes.html"
+                    class="nav-link"
+                >
+                    Mis viajes
+                </a>
+
+            </nav>
+
+
+            <div class="dashboard-user">
+
+                <button class="notification-button">
+                    <i class="fa-regular fa-bell"></i>
+                    <span></span>
+                </button>
+
+                <a href="perfil.html" class="dashboard-profile">
+
+                    <div class="dashboard-avatar">
+                        FA
+                    </div>
+
+                    <div>
+                        <strong>Fabricio</strong>
+                        <small>Estudiante</small>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- BIENVENIDA -->
+
+        <section class="dashboard-hero">
+
+            <div class="container">
+
+                <div class="dashboard-welcome">
+
+                    <div>
+                        <span class="dashboard-eyebrow">
+                            VIERNES · 18 SEPTIEMBRE
+                        </span>
+
+                        <h1>
+                            Hola, Fabricio.
+                            <span>¿A dónde vas hoy?</span>
+                        </h1>
+                    </div>
+
+                    <a
+                        href="publicar.html"
+                        class="btn btn-secondary dashboard-publish"
+                    >
+                        <i class="fa-solid fa-plus"></i>
+                        Publicar viaje
+                    </a>
+
+                </div>
+
+
+                <!-- BUSCADOR -->
+
+                <form
+                    class="dashboard-search"
+                    id="dashboardSearch"
+                >
+
+                    <div class="dashboard-search-field">
+
+                        <div class="dashboard-field-icon origin">
+                            <i class="fa-regular fa-circle-dot"></i>
+                        </div>
+
+                        <div>
+                            <label for="dashboardOrigin">
+                                SALGO DESDE
+                            </label>
+
+                            <select id="dashboardOrigin">
+
+                                <option value="">
+                                    Selecciona tu salida
+                                </option>
+
+                                <option>
+                                    Acceso Norte UAA
+                                </option>
+
+                                <option>
+                                    Acceso Sur UAA
+                                </option>
+
+                                <option>
+                                    Acceso Oriente UAA
+                                </option>
+
+                                <option>
+                                    Acceso Poniente UAA
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-search-divider"></div>
+
+
+                    <div class="dashboard-search-field">
+
+                        <div class="dashboard-field-icon destination">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
+                        <div>
+                            <label for="dashboardDestination">
+                                VOY HACIA
+                            </label>
+
+                            <input
+                                type="text"
+                                id="dashboardDestination"
+                                placeholder="Escribe tu destino"
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-search-divider"></div>
+
+
+                    <div class="dashboard-search-field date">
+
+                        <div class="dashboard-field-icon">
+                            <i class="fa-regular fa-calendar"></i>
+                        </div>
+
+                        <div>
+                            <label for="dashboardDate">
+                                FECHA
+                            </label>
+
+                            <input
+                                type="date"
+                                id="dashboardDate"
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="btn btn-primary dashboard-search-button"
+                        type="submit"
+                    >
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <span>Buscar viaje</span>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- VIAJES -->
+
+        <section class="available-trips">
+
+            <div class="container">
+
+                <div class="dashboard-section-header">
+
+                    <div>
+                        <span class="section-eyebrow">
+                            CERCA DE TI
+                        </span>
+
+                        <h2>Viajes disponibles</h2>
+
+                        <p>
+                            Viajes publicados recientemente desde la UAA.
+                        </p>
+                    </div>
+
+
+                    <a href="buscar.html">
+                        Ver todos
+
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <div
+                    class="trip-cards-grid"
+                    id="dashboardTripsGrid"
+                >
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACCIONES RÁPIDAS -->
+
+        <section class="dashboard-actions-section">
+
+            <div class="container">
+
+                <div class="dashboard-actions-grid">
+
+                    <a
+                        href="publicar.html"
+                        class="dashboard-action-card primary-action"
+                    >
+
+                        <div class="dashboard-action-icon">
+                            <i class="fa-solid fa-car-side"></i>
+                        </div>
+
+                        <div>
+                            <span>¿TÚ MANEJAS?</span>
+
+                            <h3>Publica tu próximo viaje</h3>
+
+                            <p>
+                                Aprovecha los lugares disponibles de tu
+                                vehículo y comparte gastos.
+                            </p>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                    </a>
+
+
+                    <a
+                        href="mis-viajes.html"
+                        class="dashboard-action-card"
+                    >
+
+                        <div class="dashboard-action-icon secondary">
+                            <i class="fa-solid fa-route"></i>
+                        </div>
+
+                        <div>
+                            <span>TUS TRAYECTOS</span>
+
+                            <h3>Consulta tus viajes</h3>
+
+                            <p>
+                                Revisa tus próximas reservaciones y los
+                                viajes que has publicado.
+                            </p>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- NAVEGACIÓN MÓVIL -->
+
+    <nav class="bottom-navigation">
+
+        <a
+            href="dashboard.html"
+            class="bottom-nav-item active"
+        >
+            <i class="fa-solid fa-house"></i>
+            <span>Inicio</span>
+        </a>
+
+        <a
+            href="buscar.html"
+            class="bottom-nav-item"
+        >
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Buscar</span>
+        </a>
+
+        <a
+            href="publicar.html"
+            class="bottom-nav-item publish-item"
+        >
+            <div class="publish-button">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+
+            <span>Publicar</span>
+        </a>
+
+        <a
+            href="mis-viajes.html"
+            class="bottom-nav-item"
+        >
+            <i class="fa-solid fa-route"></i>
+            <span>Viajes</span>
+        </a>
+
+        <a
+            href="perfil.html"
+            class="bottom-nav-item"
+        >
+            <i class="fa-regular fa-user"></i>
+            <span>Perfil</span>
+        </a>
+
+    </nav>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

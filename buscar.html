@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Buscar viaje | UAAventón</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="app-body">
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="header app-header">
+
+        <div class="container nav-container">
+
+            <a href="dashboard.html" class="logo">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-route"></i>
+                </div>
+
+                <span>UAA<span>ventón</span></span>
+
+            </a>
+
+
+            <nav class="desktop-nav">
+
+                <a href="dashboard.html" class="nav-link">
+                    Inicio
+                </a>
+
+                <a href="buscar.html" class="nav-link active">
+                    Buscar viaje
+                </a>
+
+                <a href="publicar.html" class="nav-link">
+                    Publicar viaje
+                </a>
+
+                <a href="mis-viajes.html" class="nav-link">
+                    Mis viajes
+                </a>
+
+            </nav>
+
+
+            <div class="dashboard-user">
+
+                <button class="notification-button">
+                    <i class="fa-regular fa-bell"></i>
+                    <span></span>
+                </button>
+
+                <a href="perfil.html" class="dashboard-profile">
+
+                    <div class="dashboard-avatar">
+                        FA
+                    </div>
+
+                    <div>
+                        <strong>Fabricio</strong>
+                        <small>Estudiante</small>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================================
+             ENCABEZADO
+        ========================================== -->
+
+        <section class="search-page-header">
+
+            <div class="container">
+
+                <span class="section-eyebrow">
+                    ENCUENTRA TU CAMINO
+                </span>
+
+                <h1>Buscar viaje</h1>
+
+                <p>
+                    Encuentra estudiantes que van hacia tu mismo destino.
+                </p>
+
+
+                <!-- BUSCADOR -->
+
+                <form
+                    class="search-page-form"
+                    id="searchPageForm"
+                >
+
+                    <div class="search-page-field">
+
+                        <div class="dashboard-field-icon">
+                            <i class="fa-regular fa-circle-dot"></i>
+                        </div>
+
+                        <div>
+                            <label for="searchOrigin">
+                                SALGO DESDE
+                            </label>
+
+                            <select id="searchOrigin">
+
+                                <option value="">
+                                    Selecciona tu salida
+                                </option>
+
+                                <option value="Acceso Norte UAA">
+                                    Acceso Norte UAA
+                                </option>
+
+                                <option value="Acceso Sur UAA">
+                                    Acceso Sur UAA
+                                </option>
+
+                                <option value="Acceso Oriente UAA">
+                                    Acceso Oriente UAA
+                                </option>
+
+                                <option value="Acceso Poniente UAA">
+                                    Acceso Poniente UAA
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="search-page-field">
+
+                        <div class="dashboard-field-icon destination">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
+                        <div>
+                            <label for="searchDestination">
+                                VOY HACIA
+                            </label>
+
+                            <input
+                                type="text"
+                                id="searchDestination"
+                                placeholder="¿A dónde quieres ir?"
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="search-page-field date-field">
+
+                        <div class="dashboard-field-icon">
+                            <i class="fa-regular fa-calendar"></i>
+                        </div>
+
+                        <div>
+                            <label for="searchDate">
+                                FECHA
+                            </label>
+
+                            <input
+                                type="date"
+                                id="searchDate"
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary search-page-button"
+                    >
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        Buscar
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             RESULTADOS
+        ========================================== -->
+
+        <section class="search-results-section">
+
+            <div class="container search-layout">
+
+                <!-- FILTROS -->
+
+                <aside class="search-filters">
+
+                    <div class="filters-heading">
+
+                        <div>
+                            <i class="fa-solid fa-sliders"></i>
+                            <strong>Filtros</strong>
+                        </div>
+
+                        <button
+                            type="button"
+                            id="clearFilters"
+                        >
+                            Limpiar
+                        </button>
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <label>Hora de salida</label>
+
+                        <div class="filter-options">
+
+                            <label class="filter-option">
+                                <input
+                                    type="radio"
+                                    name="timeFilter"
+                                    value="all"
+                                    checked
+                                >
+
+                                <span>Todo el día</span>
+                            </label>
+
+
+                            <label class="filter-option">
+                                <input
+                                    type="radio"
+                                    name="timeFilter"
+                                    value="morning"
+                                >
+
+                                <span>
+                                    Mañana
+                                    <small>6:00 - 12:00</small>
+                                </span>
+                            </label>
+
+
+                            <label class="filter-option">
+                                <input
+                                    type="radio"
+                                    name="timeFilter"
+                                    value="afternoon"
+                                >
+
+                                <span>
+                                    Tarde
+                                    <small>12:00 - 18:00</small>
+                                </span>
+                            </label>
+
+
+                            <label class="filter-option">
+                                <input
+                                    type="radio"
+                                    name="timeFilter"
+                                    value="night"
+                                >
+
+                                <span>
+                                    Noche
+                                    <small>18:00 - 23:00</small>
+                                </span>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <div class="filter-label-row">
+                            <label for="priceFilter">
+                                Precio máximo
+                            </label>
+
+                            <strong id="priceValue">
+                                $60
+                            </strong>
+                        </div>
+
+                        <input
+                            type="range"
+                            id="priceFilter"
+                            min="0"
+                            max="100"
+                            value="60"
+                            step="5"
+                        >
+
+                        <div class="range-labels">
+                            <span>$0</span>
+                            <span>$100+</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <label>Lugares disponibles</label>
+
+                        <select
+                            class="filter-select"
+                            id="seatsFilter"
+                        >
+                            <option value="1">
+                                Al menos 1 lugar
+                            </option>
+
+                            <option value="2">
+                                Al menos 2 lugares
+                            </option>
+
+                            <option value="3">
+                                Al menos 3 lugares
+                            </option>
+
+                            <option value="4">
+                                Al menos 4 lugares
+                            </option>
+                        </select>
+
+                    </div>
+
+                </aside>
+
+
+                <!-- RESULTADOS -->
+
+                <div class="search-results">
+
+                    <div class="results-top">
+
+                        <div>
+                            <span id="resultsCount">
+                                4 viajes encontrados
+                            </span>
+
+                            <p id="resultsDescription">
+                                Viajes desde la UAA hacia tu destino.
+                            </p>
+                        </div>
+
+
+                        <select id="sortTrips">
+
+                            <option value="recommended">
+                                Recomendados
+                            </option>
+
+                            <option value="price">
+                                Menor precio
+                            </option>
+
+                            <option value="time">
+                                Salida más próxima
+                            </option>
+
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- VIAJES PUBLICADOS DINÁMICAMENTE -->
+
+                        <div id="publishedTripsList"></div>
+
+
+                    <!-- SIN RESULTADOS -->
+
+                    <div
+                        class="no-results"
+                        id="noResults"
+                    >
+
+                        <div>
+                            <i class="fa-solid fa-route"></i>
+                        </div>
+
+                        <h3>No encontramos viajes</h3>
+
+                        <p>
+                            Intenta modificar los filtros o buscar otro horario.
+                        </p>
+
+                        <button
+                            class="btn btn-primary"
+                            id="resetSearchFilters"
+                        >
+                            Limpiar filtros
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         MOBILE NAVIGATION
+    ========================================== -->
+
+    <nav class="bottom-navigation">
+
+        <a
+            href="dashboard.html"
+            class="bottom-nav-item"
+        >
+            <i class="fa-solid fa-house"></i>
+            <span>Inicio</span>
+        </a>
+
+        <a
+            href="buscar.html"
+            class="bottom-nav-item active"
+        >
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Buscar</span>
+        </a>
+
+        <a
+            href="publicar.html"
+            class="bottom-nav-item publish-item"
+        >
+            <div class="publish-button">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+
+            <span>Publicar</span>
+        </a>
+
+        <a
+            href="mis-viajes.html"
+            class="bottom-nav-item"
+        >
+            <i class="fa-solid fa-route"></i>
+            <span>Viajes</span>
+        </a>
+
+        <a
+            href="perfil.html"
+            class="bottom-nav-item"
+        >
+            <i class="fa-regular fa-user"></i>
+            <span>Perfil</span>
+        </a>
+
+    </nav>
+
+
+    <script src="js/app.js"></script>
+    <script src="js/buscar.js"></script>
+
+</body>
+</html>
